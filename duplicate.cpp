@@ -3,19 +3,18 @@
 using namespace std;
 int main() {
     int n,i;
-    cout<<"enter n:";
     cin>>n;
-    int arr[n];
-    cout<<"enter sorted array:";
+    int a[n];
+    cout<<"enter elements into the array:";
     for(i=0;i<n;i++)
     {
-        cin>>arr[i];
+        cin>>a[i];
     }
-    set<int> s;
-    for (int i = 0; i < n; i++)
-        s.insert(arr[i]);
-    cout << "Array after removing duplicates: ";
-    for (int x : s)
-        cout << x << " ";
+    set<int> st;
+    for(i=0;i<n;i++)
+        st.insert(a[i]);
+    cout << "Array without duplicates: ";
+    for(int x:st)
+        cout <<x<<" ";
     return 0;
 }
