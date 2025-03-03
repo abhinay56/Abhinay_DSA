@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int main() {
-    int n,j;
+    int n,m,j;
     cout<<"Enter size of array: ";
     cin>>n;
     int arr[n];
@@ -16,9 +16,13 @@ int main() {
          if(arr[i]!=arr[j])
          {
              arr[i+1]=arr[j];
+             m=i+1;
              i++;
          }
      }
-    cout<<"the index of unique elements :"<<i+1;
+     for(int i=0;i<=m;i++)
+    {
+        cout<<arr[i];
+    }
     return 0;
 }
